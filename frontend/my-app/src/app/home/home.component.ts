@@ -11,5 +11,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = ['../../assets/banner1.jpg', '../../assets/banner2.jpg', '../../assets/banner3.jpg']
 
 }
