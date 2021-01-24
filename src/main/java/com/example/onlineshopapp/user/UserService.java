@@ -11,7 +11,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public Long createUserEntityFromClientAndGetId(User user) {
+    public Long createUserEntity(User user) {
         final UserEntity userEntity = userRepository.save(new UserEntity(null, user.getName(), user.getSurname(), user.getCity()));
         return userEntity.getId();
     }
