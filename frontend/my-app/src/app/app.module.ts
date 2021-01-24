@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { MatInputModule } from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -22,6 +24,7 @@ import { MenuComponent } from './menu/menu.component';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { GridListComponent } from './grid-list/grid-list.component';
+import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 
 
 const routes: Routes = [
@@ -44,7 +47,8 @@ const routes: Routes = [
     BasketComponent,
     LoginPanelComponent,
     MenuComponent,
-    GridListComponent
+    GridListComponent,
+    ProgressSpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,7 @@ const routes: Routes = [
     MatInputModule,
     MatGridListModule,
     MatCardModule,
+    MatProgressSpinnerModule,
     FormsModule,
     RouterModule.forRoot(routes),
     NgbModule,
