@@ -1,17 +1,18 @@
 <mat-toolbar color="primary" class="mat-elevation-z6" xmlns="http://www.w3.org/1999/html">
-  <span id="navLogo"><mat-icon>local_mall</mat-icon>  KoxuShop</span>
+    <span id="navLogo"><mat-icon>local_mall</mat-icon>  KoxuShop</span>
 
-  <div class="space"></div>
+    <div class="space"></div>
 
-  <label>
-    <input type="text" matInput placeholder="Czego szukasz?">
-  </label>
+    <label>
+      <input type="text" placeholder="Czego szukasz?">
+    </label>
 
-  <button mat-button [routerLink]="['/home']"> Strona główna</button>
-  <a mat-button [routerLink]="['/category']">Kategorie</a>
-  <a mat-button [routerLink]="['/about']">O nas</a>
-  <a mat-button [routerLink]="['/contact']">Kontakt</a>
-  <button mat-button [routerLink]="['/basket']"><mat-icon>shopping_cart</mat-icon> </button>
+    <button mat-button [routerLink]="['/home']"> Strona główna</button>
+    <button mat-button [routerLink]="['/category']">Kategorie</button>
+    <button mat-button [routerLink]="['/about']">O nas</button>
+    <button mat-button [routerLink]="['/contact']">Kontakt</button>
+    <button mat-button [routerLink]="['/basket']"><mat-icon>shopping_cart</mat-icon> </button>
 
-  <a mat-raised-button color="accent">Zaloguj się</a>
-</mat-toolbar>
+    <button mat-raised-button color="accent" [routerLink]="['/login']">Zaloguj się</button>
+    
+</mat-toolbar> 
