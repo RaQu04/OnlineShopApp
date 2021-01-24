@@ -1,9 +1,7 @@
-<div>
-  <div id="menu">
-    <app-menu></app-menu>
-  </div>
+<div id="menu">
 
-  <div>
+  <app-menu></app-menu>
+  <div id="photos">
     <ngb-carousel *ngIf="images">
       <ng-template ngbSlide>
         <div class="picsum-img-wrapper">
@@ -29,5 +27,6 @@
         </div>
       </ng-template>
     </ngb-carousel>
+
   </div>
 </div>
