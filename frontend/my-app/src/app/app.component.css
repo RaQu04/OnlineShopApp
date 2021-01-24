@@ -7,6 +7,11 @@
 }
 
 #router{
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#menu{
+  text-align-all: center;
+
 }

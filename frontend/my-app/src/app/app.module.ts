@@ -18,6 +18,11 @@ import { BasketComponent } from './basket/basket.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPanelComponent } from './login-panel/login-panel.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MenuComponent } from './menu/menu.component';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { GridListComponent } from './grid-list/grid-list.component';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -37,15 +42,19 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     BasketComponent,
-    LoginPanelComponent
+    LoginPanelComponent,
+    MenuComponent,
+    GridListComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatListModule,
     MatIconModule,
     MatInputModule,
+    MatGridListModule,
     MatCardModule,
     FormsModule,
     RouterModule.forRoot(routes),

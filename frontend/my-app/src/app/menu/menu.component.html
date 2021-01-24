@@ -1,0 +1,12 @@
+
+<p>Kategorie:</p>
+
+<mat-selection-list #category [multiple]="false">
+  <mat-list-option *ngFor="let category of typesOfCategory" [value]="category">
+    {{category}}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Option selected: {{category.selectedOptions.selected[0]?.value}}
+</p>
