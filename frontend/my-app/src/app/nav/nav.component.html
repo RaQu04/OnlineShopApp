@@ -1,11 +1,11 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
-    <span><mat-icon>local_mall</mat-icon>KoxuShop</span>
+  <span><mat-icon>local_mall</mat-icon>KoxuShop</span>
 
-    <div class="space"></div>
+  <div class="space"></div>
 
-    <button mat-button routerLink = "['/home']" > Strona główna</button>
-    <a mat-button>Kategorie</a>
-    <a mat-button>O nas</a>
-    <a mat-button>Kontakt</a>
-    <a mat-raised-button color= "accent">Zaloguj się</a>
+  <button mat-button [routerLink]="['/home']"> Strona główna</button>
+  <a mat-button [routerLink]="['/category']">Kategorie</a>
+  <a mat-button [routerLink]="['/about']">O nas</a>
+  <a mat-button [routerLink]="['/contact']">Kontakt</a>
+  <a mat-raised-button color="accent">Zaloguj się</a>
 </mat-toolbar>

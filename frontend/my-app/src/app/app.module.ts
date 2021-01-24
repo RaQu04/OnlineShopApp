@@ -13,7 +13,10 @@ import { CategoryComponent } from './category/category.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
-const routes: Routes = [{ path: 'home', component: HomeComponent }]
+const routesHome: Routes = [{ path: 'home', component: HomeComponent }]
+const routesCategory: Routes = [{ path: 'category', component: CategoryComponent }]
+const routesAbout: Routes = [{ path: 'about', component: AboutComponent }]
+const routesContact: Routes = [{ path: 'contact', component: ContactComponent }]
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ const routes: Routes = [{ path: 'home', component: HomeComponent }]
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routesHome),
+    RouterModule.forRoot(routesCategory),
+    RouterModule.forRoot(routesAbout),
+    RouterModule.forRoot(routesContact)
   ],
   providers: [],
   bootstrap: [AppComponent]
