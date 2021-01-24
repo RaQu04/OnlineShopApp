@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
+import { CategoryComponent } from './category/category.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [{ path: 'home', component: HomeComponent }]
 
@@ -16,7 +19,10 @@ const routes: Routes = [{ path: 'home', component: HomeComponent }]
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    CategoryComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
