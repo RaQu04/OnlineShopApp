@@ -2,7 +2,7 @@
 <p>Kategorie:</p>
 
 <mat-selection-list #category [multiple]="false">
-  <mat-list-option *ngFor="let category of typesOfCategory" [value]="category">
+  <mat-list-option id="listItem" *ngFor="let category of typesOfCategory" [value]="category">
     {{category}}
   </mat-list-option>
 </mat-selection-list>

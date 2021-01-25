@@ -1,17 +1,22 @@
-#menu{
-  tab-size: 10px;
-  display: flex;
-  justify-content: flex-start;
-  /*border: 2px solid;*/
+#container {
+  width: 100%;
+  margin-left: auto;
+}
+
+#menu {
+  width: 15%;
+  float: left;
+  background-color: mediumpurple;
+  color: white;
+  margin-right: 5px;
 }
 
 #photos {
-  display: flex;
-  justify-content: flex-end;
-  /*flex-direction: row;*/
-  width: auto;
-  height: auto;
-  /*border: 2px solid;*/
-  overflow: auto;
-  resize:both;
+  float: left;
+  width: 70%;
+  height: 40%;
+}
+
+#empty {
+  clear: both;
 }
