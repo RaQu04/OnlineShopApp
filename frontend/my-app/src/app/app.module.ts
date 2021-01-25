@@ -25,6 +25,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
+import { AdPanelComponent } from './ad-panel/ad-panel.component';
 
 
 const routes: Routes = [
@@ -48,7 +49,8 @@ const routes: Routes = [
     LoginPanelComponent,
     MenuComponent,
     GridListComponent,
-    ProgressSpinnerComponent
+    ProgressSpinnerComponent,
+    AdPanelComponent
   ],
   imports: [
     BrowserModule,

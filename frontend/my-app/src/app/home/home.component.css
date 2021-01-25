@@ -6,15 +6,20 @@
 #menu {
   width: 15%;
   float: left;
-  background-color: mediumpurple;
+  background-color: #6200EE;
   color: white;
   margin-right: 5px;
 }
 
 #photos {
   float: left;
-  width: 70%;
-  height: 40%;
+  width: 72%;
+  /*height: 40%;*/
+}
+
+#ad {
+  float: left;
+  margin-left: 5px;
 }
 
 #empty {
