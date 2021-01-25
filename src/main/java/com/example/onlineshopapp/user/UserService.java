@@ -12,7 +12,16 @@ public class UserService {
     }
 
     public Long createUserEntity(User user) {
-        final UserEntity userEntity = userRepository.save(new UserEntity(null, user.getName(), user.getSurname(), user.getCity()));
+        final UserEntity userEntity = userRepository.save(new UserEntity(
+                null,
+                user.getName(),
+                user.getSurname(),
+                user.getLogin(),
+                user.getPassword(),
+                user.getAddress(),
+                user.getDateOfCreatedAccount(),
+                user.getStatus(),
+                user.getTypeAccount()));
         return userEntity.getId();
     }
 
