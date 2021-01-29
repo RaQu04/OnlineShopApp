@@ -24,7 +24,7 @@ public class MockData {
     public void mockData(){
 
         UserEntity userEntity = new UserEntity(
-                1L,
+                null,
                 "John",
                 "Snow",
                 "john123",
