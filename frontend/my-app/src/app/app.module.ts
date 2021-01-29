@@ -26,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { GridListComponent } from './grid-list/grid-list.component';
 import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.component';
 import { AdPanelComponent } from './ad-panel/ad-panel.component';
+import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
 
 
 const routes: Routes = [
@@ -50,7 +51,8 @@ const routes: Routes = [
     MenuComponent,
     GridListComponent,
     ProgressSpinnerComponent,
-    AdPanelComponent
+    AdPanelComponent,
+    ShoppingBasketComponent
   ],
   imports: [
     BrowserModule,
