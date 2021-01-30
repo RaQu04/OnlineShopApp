@@ -1,9 +1,7 @@
-#spinner{
-  display: flex;
-  justify-content: center;
-}
-
 #message {
-  display: flex;
+  text-align: center;
   justify-content: center;
-}
+  margin: 20px;
+  color: rgb(0, 68, 255);
+  text-shadow: 2px 2px 15px rgb(0, 162, 255);
+  }
