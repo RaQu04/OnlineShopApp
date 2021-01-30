@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -23,7 +24,7 @@ class UserControllerTest {
             "John",
             "Weak",
             "John123",
-            "john123",
+            "John123",
             "testowa 123",
             Date.from(Instant.now()),
             Status.ACTIVE,
@@ -49,13 +50,14 @@ class UserControllerTest {
 
     @BeforeEach
     void setUp() {
-//        userRepository.deleteAll();
+
     }
 
     @Test
     void shouldSaveClientToRepository() {
 
         //given
+
         final ResponseEntity<Void> voidResponseEntity = testRestTemplate.postForEntity("/users", USER_JAN_KOWALSKI, Void.class);
 
         //when
@@ -63,22 +65,18 @@ class UserControllerTest {
 
         //then
         Assertions.assertThat(voidResponseEntity.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        Assertions.assertThat(usersEntity.size()).isEqualTo(1);
+        Assertions.assertThat(usersEntity.size()).isEqualTo(2);
     }
 
     @Test
-    void shouldReturnUserWhenExistInRepository() {
+    void shouldReturnUserIfExist() {
         //given
-        userRepository.deleteAll();
-        userRepository.save(USER_ENTITY_JOHN_WEAK);
 
         //when
-        ResponseEntity<User> forEntity = testRestTemplate.getForEntity("/users/2", User.class);
+        final ResponseEntity<User> forEntity = testRestTemplate.getForEntity("/users/1", User.class);
 
         //then
-        assertThat(forEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(forEntity.getBody()).isNotNull();
-        assertThat(forEntity.getBody().getLogin()).isEqualTo("John123");
-    }
+        assertThat("john123").isEqualTo(Objects.requireNonNull(forEntity.getBody()).getLogin());
+     }
 
 }
