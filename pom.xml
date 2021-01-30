@@ -12,7 +12,7 @@
     <artifactId>onlineshopapp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>OnlineShopApp</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Online shop with angular and Spring Boot</description>
     <properties>
         <java.version>11</java.version>
     </properties>

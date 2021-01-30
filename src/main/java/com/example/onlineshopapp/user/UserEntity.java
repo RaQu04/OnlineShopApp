@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name ="Users")
 @Data
@@ -20,5 +18,13 @@ public class UserEntity {
     Long id;
     String name;
     String surname;
-    String city;
+    String login;
+    String password;
+    String address;
+    Date dateOfCreatedAccount;
+    @Enumerated(EnumType.STRING)
+    Status status;
+    @Enumerated(EnumType.STRING)
+    TypeAccount typeAccount;
 }
+
