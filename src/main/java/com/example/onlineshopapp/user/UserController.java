@@ -1,6 +1,11 @@
 package com.example.onlineshopapp.user;
 
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.List;
 
 @RestController
 public class UserController {
@@ -9,6 +14,27 @@ public class UserController {
 
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @PostMapping("/users")
+    public ResponseEntity<Void> addUser(@RequestBody User user) throws URISyntaxException {
+        Long userId = userService.createUserEntity(user);
+
+        return ResponseEntity
+                .created(new URI("/users/" + userId))
+                .build();
+    }
+
+    @GetMapping("/users")
+    public List<UserEntity> getAllUsers() {
+        return userService.getAllUsers();
+    }
+
+    @GetMapping("users/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id){
+        return userService.getUser(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
 }
