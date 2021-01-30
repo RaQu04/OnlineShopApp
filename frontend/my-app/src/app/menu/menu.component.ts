@@ -12,5 +12,5 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  typesOfCategory: string[] = ['Nieruchomości', 'Motoryzacja', "Moda", 'Zabawaki', 'Gry'];
+  typesOfCategory: string[] = ['Nieruchomości', 'Motoryzacja', "Moda", 'Zabawki', 'Gry'];
 }
