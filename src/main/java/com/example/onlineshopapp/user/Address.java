@@ -1,11 +1,19 @@
 package com.example.onlineshopapp.user;
 
-import lombok.Data;
+import lombok.*;
 
-@Data
+import javax.persistence.Embeddable;
+
+@Builder
+@Embeddable
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class Address {
 
     private String street;
     private String city;
     private String zipCode;
+    private String country;
 }

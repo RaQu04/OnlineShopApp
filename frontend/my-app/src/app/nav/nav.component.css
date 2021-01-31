@@ -8,3 +8,8 @@
 #navLogo{
   margin: 10px;
 }
+
+mat-toolbar{
+  color: white;
+  background-color: cornflowerblue;
+}

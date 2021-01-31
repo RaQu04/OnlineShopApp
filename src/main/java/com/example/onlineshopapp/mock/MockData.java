@@ -1,9 +1,6 @@
 package com.example.onlineshopapp.mock;
 
-import com.example.onlineshopapp.user.Status;
-import com.example.onlineshopapp.user.TypeAccount;
-import com.example.onlineshopapp.user.UserEntity;
-import com.example.onlineshopapp.user.UserRepository;
+import com.example.onlineshopapp.user.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -27,9 +24,9 @@ public class MockData {
                 null,
                 "John",
                 "Snow",
-                "login",
-                "haslo",
-                "addres",
+                "john123",
+                "jon123",
+                new Address("ul. Testowa 12", "Poznań", "12-123", "Poland"),
                 Date.from(Instant.now()),
                 Status.ACTIVE,
                 TypeAccount.PREMIUM);

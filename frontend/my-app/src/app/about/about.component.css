@@ -1,0 +1,26 @@
+#textAbout {
+  margin: 30px;
+  display: inline;
+  text-align: center;
+  color: rgb(0, 68, 255);
+  text-shadow: 2px 2px 15px rgb(0, 162, 255);
+}
+
+#text {
+  width: 70%;
+  float: left;
+
+
+}
+
+#image1 {
+  width: 30%;
+  float: right;
+
+}
+
+#image2 {
+  width: 30%;
+  float: left;
+
+}
