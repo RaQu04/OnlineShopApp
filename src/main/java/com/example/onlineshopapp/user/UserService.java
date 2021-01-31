@@ -54,6 +54,11 @@ public class UserService {
     }
 
     public List<User> getUsersBySurname(String surname) {
-        return userRepository.findBySurname(surname);
+        return userRepository.findAllBySurname(surname);
     }
+
+    public List<User> getUsersByType(TypeAccount typeAccount){
+        return userRepository.findAllByTypeAccount(typeAccount);
+    }
+
 }

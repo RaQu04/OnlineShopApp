@@ -41,4 +41,9 @@ public class UserController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/users/type/normal")
+    public List<User> getUsersByTypeNormal(TypeAccount typeAccount){
+        return userService.getUsersByType(typeAccount);
+    }
+
 }
