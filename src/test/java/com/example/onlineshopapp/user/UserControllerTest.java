@@ -25,7 +25,7 @@ class UserControllerTest {
             "Weak",
             "John123",
             "John123",
-            "testowa 123",
+            new Address("ul. Testowa 12", "Poznań", "12-123", "Poland"),
             Date.from(Instant.now()),
             Status.ACTIVE,
             TypeAccount.NORMAL
@@ -34,11 +34,8 @@ class UserControllerTest {
     public static final User USER_JAN_KOWALSKI = new User(
             "Jan",
             "Kowalski",
-            "janek123",
             "janek12345",
-            "testowa321",
-            null,
-            Status.ACTIVE,
+            new Address("ul. Testowa 12", "Poznań", "12-123", "Poland"),
             TypeAccount.PREMIUM
     );
 
@@ -55,9 +52,7 @@ class UserControllerTest {
 
     @Test
     void shouldSaveClientToRepository() {
-
         //given
-
         final ResponseEntity<Void> voidResponseEntity = testRestTemplate.postForEntity("/users", USER_JAN_KOWALSKI, Void.class);
 
         //when

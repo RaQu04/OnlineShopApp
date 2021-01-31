@@ -2,6 +2,8 @@ package com.example.onlineshopapp.user;
 
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,16 +16,24 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
+    public static Date createDateOfStartAccount(){
+        return Date.from(Instant.now());
+    }
+
+    public static String createDefaultPassword(User user){
+        return user.getLogin();
+    }
+
     public Long createUserEntity(User user) {
         final UserEntity userEntity = userRepository.save(new UserEntity(
                 null,
                 user.getName(),
                 user.getSurname(),
                 user.getLogin(),
-                user.getPassword(),
+                createDefaultPassword(user),
                 user.getAddress(),
-                user.getDateOfCreatedAccount(),
-                user.getStatus(),
+                createDateOfStartAccount(),
+                Status.ACTIVE,
                 user.getTypeAccount()));
         return userEntity.getId();
     }
