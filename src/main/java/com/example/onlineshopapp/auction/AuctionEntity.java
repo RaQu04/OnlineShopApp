@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 
-@Entity
+@Entity(name = "Auctions")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
