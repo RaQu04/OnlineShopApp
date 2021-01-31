@@ -29,6 +29,7 @@ import { AdPanelComponent } from './ad-panel/ad-panel.component';
 import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
 import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 
@@ -56,7 +57,8 @@ const routes: Routes = [
     ProgressSpinnerComponent,
     AdPanelComponent,
     ShoppingBasketComponent,
-    ShoppingItemComponent
+    ShoppingItemComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

@@ -7,32 +7,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GridListComponent implements OnInit {
 
+  value: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  pokazZabawki() {
+  pokazZabawki(): void {
+    this.value = 'Kategoria zabawki';
+  }
+
+  pokazNieruchomosci(): void {
+    this.value = 'Kategoria nieruchomości';
+  }
+
+  pokazMotoryzacja(): void {
+    this.value = 'Kategoria motoryzacja';
+  }
+
+  pokazEletronika(): void {
+    this.value = 'Kategoria elektronika';
 
   }
 
-  pokazNieruchomosci() {
+  pokazRowery(): void {
+    this.value = 'Kategoria rowery';
 
   }
 
-  pokazMotoryzacja() {
-
-  }
-
-  pokazEletronika() {
-
-  }
-
-  pokazRowery() {
-
-  }
-
-  pokazModa() {
+  pokazModa(): void {
+    this.value = 'Kategoria moda';
 
   }
 }
