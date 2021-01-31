@@ -1,10 +1,26 @@
 <mat-grid-list cols="6" rowHeight="5:1">
-  <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazMotoryzacja()">Motoryzacja</button></mat-grid-tile>
-  <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazNieruchomosci()">Nieruchomości</button></mat-grid-tile>
+  <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazMotoryzacja()">Motoryzacja</button>
+  </mat-grid-tile>
+  <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazNieruchomosci()">Nieruchomości</button>
+  </mat-grid-tile>
   <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazZabawki()">Zabawki</button></mat-grid-tile>
   <mat-grid-tile><button id='categoryButton' mat-button (click)="pokazEletronika()">Elektronika</button></mat-grid-tile>
- <mat-grid-tile> <button id='categoryButton' mat-button (click)="pokazRowery()">Rowery</button></mat-grid-tile>
- <mat-grid-tile> <button id='categoryButton' mat-button (click)="pokazModa()">Moda</button></mat-grid-tile>
+  <mat-grid-tile> <button id='categoryButton' mat-button (click)="pokazRowery()">Rowery</button></mat-grid-tile>
+  <mat-grid-tile> <button id='categoryButton' mat-button (click)="pokazModa()">Moda</button></mat-grid-tile>
 </mat-grid-list>
 
 {{value}}
+
+<br><br>
+
+<div>
+  <div id="product_cards">
+    <app-product-card></app-product-card>
+  </div>
+  <div id="product_cards">
+    <app-product-card></app-product-card>
+  </div>
+  <div id="product_cards">
+    <app-product-card></app-product-card>
+  </div>
+</div>
