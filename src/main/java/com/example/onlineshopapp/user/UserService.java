@@ -1,5 +1,6 @@
 package com.example.onlineshopapp.user;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -11,9 +12,11 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public static Date createDateOfStartAccount(){
@@ -30,7 +33,7 @@ public class UserService {
                 user.getName(),
                 user.getSurname(),
                 user.getLogin(),
-                createDefaultPassword(user),
+                passwordEncoder.encode(createDefaultPassword(user)),
                 user.getAddress(),
                 createDateOfStartAccount(),
                 Status.ACTIVE,
