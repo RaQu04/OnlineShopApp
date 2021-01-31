@@ -1,12 +1,22 @@
-
-<p>Kategorie:</p>
+<B>Kategorie:</B>
 
 <mat-selection-list #category [multiple]="false">
-  <mat-list-option id="listItem" *ngFor="let category of typesOfCategory" [value]="category">
-    {{category}}
+  <mat-list-option id="listItem" *ngFor="let categoryElement of typesOfCategory" [value]="categoryElement">
+    {{categoryElement}}
   </mat-list-option>
 </mat-selection-list>
 
-<p>
-  Wybrano: <br> {{category.selectedOptions.selected[0]?.value}}
+
+<B>Wybrano:</B><p><br> {{category.selectedOptions.selected[0]?.value}}
 </p>
+
+<p><B>Aukcje</B></p>
+
+<mat-selection-list #auction [multiple]="false">
+  <mat-list-option id="listItem" *ngFor="let auctionElement of typesOfAuction" [value]="auctionElement">
+    {{auctionElement}}
+  </mat-list-option>
+</mat-selection-list>
+
+
+<B>Wybrano:</B><p><br> {{auction.selectedOptions.selected[0]?.value}}
