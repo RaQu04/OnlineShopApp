@@ -49,4 +49,8 @@ public class UserService {
         return userRepository.findById(id)
                 .map(User::fromUserEntity);
     }
+
+    public List<UserEntity> getUsersBySurname(String surname) {
+        return userRepository.findBySurname(surname);
+    }
 }
