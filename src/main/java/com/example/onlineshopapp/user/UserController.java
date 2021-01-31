@@ -26,7 +26,7 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<UserEntity> getAllUsers(@RequestParam(required = false) String surname) {
+    public List<User> getAllUsers(@RequestParam(required = false) String surname) {
         if (surname == null || surname.isEmpty()) {
             return userService.getAllUsers();
         } else{
@@ -40,12 +40,5 @@ public class UserController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-
-//    @GetMapping("/usersBySurname")
-//    public ResponseEntity<User> getUserBySurname(@RequestParam String surname) {
-//        return userService.getUsersBySurname(surname)
-//                .stream().map(ResponseEntity::ok)
-//                .findAny().orElse(ResponseEntity.notFound().build());
-//    }
 
 }

@@ -1,8 +1,6 @@
 package com.example.onlineshopapp.user;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 
@@ -10,6 +8,8 @@ import javax.persistence.Embeddable;
 @Embeddable
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Address {
 
     private String street;
