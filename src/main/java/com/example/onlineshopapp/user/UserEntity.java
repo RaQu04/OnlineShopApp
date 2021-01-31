@@ -20,7 +20,8 @@ public class UserEntity {
     String surname;
     String login;
     String password;
-    String address;
+    @Embedded
+    Address address;
     Date dateOfCreatedAccount;
     @Enumerated(EnumType.STRING)
     Status status;

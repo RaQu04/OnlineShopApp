@@ -1,7 +1,10 @@
 package com.example.onlineshopapp.user;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -9,9 +12,19 @@ import java.util.Optional;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+    }
+
+    public static Date createDateOfStartAccount(){
+        return Date.from(Instant.now());
+    }
+
+    public static String createDefaultPassword(User user){
+        return user.getLogin();
     }
 
     public Long createUserEntity(User user) {
@@ -20,10 +33,10 @@ public class UserService {
                 user.getName(),
                 user.getSurname(),
                 user.getLogin(),
-                user.getPassword(),
+                passwordEncoder.encode(createDefaultPassword(user)),
                 user.getAddress(),
-                user.getDateOfCreatedAccount(),
-                user.getStatus(),
+                createDateOfStartAccount(),
+                Status.ACTIVE,
                 user.getTypeAccount()));
         return userEntity.getId();
     }
