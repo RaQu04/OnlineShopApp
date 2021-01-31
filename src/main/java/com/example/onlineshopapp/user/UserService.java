@@ -7,6 +7,7 @@ import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -41,12 +42,18 @@ public class UserService {
         return userEntity.getId();
     }
 
-    public List<UserEntity> getAllUsers() {
-        return userRepository.findAll();
+    public List<User> getAllUsers() {
+        return userRepository.findAll().stream()
+                .map(User::fromUserEntity)
+                .collect(Collectors.toList());
     }
 
     public Optional<User> getUser(Long id) {
         return userRepository.findById(id)
                 .map(User::fromUserEntity);
+    }
+
+    public List<User> getUsersBySurname(String surname) {
+        return userRepository.findBySurname(surname);
     }
 }

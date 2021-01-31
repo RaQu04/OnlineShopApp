@@ -26,12 +26,16 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<UserEntity> getAllUsers() {
-        return userService.getAllUsers();
+    public List<User> getAllUsers(@RequestParam(required = false) String surname) {
+        if (surname == null || surname.isEmpty()) {
+            return userService.getAllUsers();
+        } else{
+            return userService.getUsersBySurname(surname);
+        }
     }
 
     @GetMapping("users/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id){
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
         return userService.getUser(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
