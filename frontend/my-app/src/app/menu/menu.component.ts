@@ -13,4 +13,5 @@ export class MenuComponent implements OnInit {
   }
 
   typesOfCategory: string[] = ['Nieruchomości', 'Motoryzacja', "Moda", 'Zabawki', 'Gry'];
+  typesOfAuction: string[] = ['Ostatnio dodane', 'Kończące się', "Wystawione przez użytkownika", "Licytowane przerz użytkownika", "Obserwowane", 'Właśnie zakończone'];
 }

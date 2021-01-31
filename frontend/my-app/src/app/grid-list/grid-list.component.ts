@@ -12,4 +12,27 @@ export class GridListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  pokazZabawki() {
+
+  }
+
+  pokazNieruchomosci() {
+
+  }
+
+  pokazMotoryzacja() {
+
+  }
+
+  pokazEletronika() {
+
+  }
+
+  pokazRowery() {
+
+  }
+
+  pokazModa() {
+
+  }
 }
