@@ -28,6 +28,8 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
 import { AdPanelComponent } from './ad-panel/ad-panel.component';
 import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
 import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 const routes: Routes = [
@@ -66,6 +68,7 @@ const routes: Routes = [
     MatInputModule,
     MatGridListModule,
     MatCardModule,
+    MatMenuModule,
     MatProgressSpinnerModule,
     FormsModule,
     RouterModule.forRoot(routes),

@@ -1,20 +1,35 @@
 <mat-toolbar class="mat-elevation-z6" xmlns="http://www.w3.org/1999/html">
-    <span id="navLogo"><mat-icon>local_mall</mat-icon>  KoxuShop</span>
+  <span id="navLogo">
+    <mat-icon>local_mall</mat-icon> KoxuShop
+  </span>
 
-    <div class="space"></div>
+  <div class="space"></div>
 
 
-<!--  <label>-->
-<!--    <input type="text" placeholder="Czego szukasz?">-->
-<!--  </label>-->
+  <!--  <label>-->
+  <!--    <input type="text" placeholder="Czego szukasz?">-->
+  <!--  </label>-->
 
 
   <button mat-button [routerLink]="['/home']"> Strona główna</button>
-    <button mat-button [routerLink]="['/category']">Kategorie</button>
-    <button mat-button [routerLink]="['/about']">O nas</button>
-    <button mat-button [routerLink]="['/contact']">Kontakt</button>
-    <button mat-button [routerLink]="['/basket']"><mat-icon>shopping_cart</mat-icon> </button>
+  <!-- <button mat-button [routerLink]="['/category']">Kategorie</button> -->
+  <button mat-button [matMenuTriggerFor] = "categoryList">Kategorie</button>
+  <mat-menu #categoryList="matMenu">
+    <button mat-menu-item [routerLink]="['/category']">Przejdź do kategorii</button>
+    <button mat-menu-item>Motoryzacja</button>
+    <button mat-menu-item>Nieruchomości</button>
+    <button mat-menu-item>Zabawki</button>
+    <button mat-menu-item>Elektronika</button>
+    <button mat-menu-item>Rowery</button>
+    <button mat-menu-item>Moda</button>
+  </mat-menu>
+  
+  <button mat-button [routerLink]="['/about']">O nas</button>
+  <button mat-button [routerLink]="['/contact']">Kontakt</button>
+  <button mat-button [routerLink]="['/basket']">
+  <mat-icon>shopping_cart</mat-icon>
+  </button>
 
-    <button mat-raised-button color="accent" [routerLink]="['/login']">Zaloguj się</button>
+  <button mat-raised-button color="accent" [routerLink]="['/login']">Zaloguj się</button>
 
 </mat-toolbar>

@@ -1,15 +1,3 @@
-<B>Kategorie:</B>
-
-<mat-selection-list #category [multiple]="false">
-  <mat-list-option id="listItem" *ngFor="let categoryElement of typesOfCategory" [value]="categoryElement">
-    {{categoryElement}}
-  </mat-list-option>
-</mat-selection-list>
-
-
-<B>Wybrano:</B><p><br> {{category.selectedOptions.selected[0]?.value}}
-</p>
-
 <p><B>Aukcje</B></p>
 
 <mat-selection-list #auction [multiple]="false">
