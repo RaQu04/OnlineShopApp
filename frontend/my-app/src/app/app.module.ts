@@ -31,6 +31,8 @@ import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.compo
 import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { CategoryElectronicComponent } from './category-electronic/category-electronic.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -59,7 +61,9 @@ const routes: Routes = [
     AdPanelComponent,
     ShoppingBasketComponent,
     ShoppingItemComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    CategoryElectronicComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

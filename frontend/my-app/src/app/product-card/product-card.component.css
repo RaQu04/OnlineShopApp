@@ -3,10 +3,16 @@
   }
   
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://png.pngtree.com/png-clipart/20191121/original/pngtree-cute-llama-avatar-with-a-yellow-background-png-image_5147719.jpg');
     background-size: cover;
   }
 
   #add_basket_button {
     text-align: center;
+  }
+
+  #price_border {
+    color: darkorange;
+    font-size: large;
+    font-style: italic;
   }
