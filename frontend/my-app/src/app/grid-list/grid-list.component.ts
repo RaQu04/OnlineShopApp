@@ -14,29 +14,29 @@ export class GridListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pokazZabawki(): void {
+  showToys(): void {
     this.value = 'Kategoria zabawki';
   }
 
-  pokazNieruchomosci(): void {
+  showProperty(): void {
     this.value = 'Kategoria nieruchomości';
   }
 
-  pokazMotoryzacja(): void {
+  showAutomotive(): void {
     this.value = 'Kategoria motoryzacja';
   }
 
-  pokazEletronika(): void {
+  showElectronic(): void {
     this.value = 'Kategoria elektronika';
 
   }
 
-  pokazRowery(): void {
+  showBike(): void {
     this.value = 'Kategoria rowery';
 
   }
 
-  pokazModa(): void {
+  showFashion(): void {
     this.value = 'Kategoria moda';
 
   }
