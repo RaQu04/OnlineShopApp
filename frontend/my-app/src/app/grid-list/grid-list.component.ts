@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductComponent} from '../product/product.component';
 
 @Component({
   selector: 'app-grid-list',
@@ -8,8 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class GridListComponent implements OnInit {
 
   value: string;
+  products: any;
+  productComponent: ProductComponent;
+  actual: boolean;
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
@@ -28,12 +33,11 @@ export class GridListComponent implements OnInit {
 
   showElectronic(): void {
     this.value = 'Kategoria elektronika';
-
+    this.actual = true;
   }
 
   showBike(): void {
     this.value = 'Kategoria rowery';
-
   }
 
   showFashion(): void {

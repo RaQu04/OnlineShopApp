@@ -10,10 +10,11 @@
 </mat-grid-list>
 
 {{value}}
+{{products}}
 
 <br><br>
 
-<div>
+<div *ngIf="actual">
   <div id="product_cards">
     <app-product-card></app-product-card>
   </div>
