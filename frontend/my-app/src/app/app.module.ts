@@ -9,6 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
+
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +29,9 @@ import { ProgressSpinnerComponent } from './progress-spinner/progress-spinner.co
 import { AdPanelComponent } from './ad-panel/ad-panel.component';
 import { ShoppingBasketComponent } from './shopping-basket/shopping-basket.component';
 import { ShoppingItemComponent } from './shopping-item/shopping-item.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ProductCardComponent } from './product-card/product-card.component';
+
 
 
 const routes: Routes = [
@@ -54,7 +58,8 @@ const routes: Routes = [
     ProgressSpinnerComponent,
     AdPanelComponent,
     ShoppingBasketComponent,
-    ShoppingItemComponent
+    ShoppingItemComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -66,6 +71,7 @@ const routes: Routes = [
     MatInputModule,
     MatGridListModule,
     MatCardModule,
+    MatMenuModule,
     MatProgressSpinnerModule,
     FormsModule,
     RouterModule.forRoot(routes),

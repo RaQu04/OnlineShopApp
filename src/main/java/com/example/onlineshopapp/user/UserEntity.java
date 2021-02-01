@@ -28,3 +28,4 @@ public class UserEntity {
     @Enumerated(EnumType.STRING)
     TypeAccount typeAccount;
 }
+

@@ -8,9 +8,9 @@ import com.example.onlineshopapp.user.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.sql.Date;
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Date;
 
 @Service
 public class MockData {
@@ -35,7 +35,7 @@ public class MockData {
                 new Address("ul. Testowa 12", "Poznań", "12-123", "Poland"),
                 Date.from(Instant.now()),
                 Status.ACTIVE,
-                TypeAccount.NORMAL);
+                TypeAccount.PREMIUM);
         userRepository.save(userEntity);
 
         AuctionEntity auctionEntity = new AuctionEntity(

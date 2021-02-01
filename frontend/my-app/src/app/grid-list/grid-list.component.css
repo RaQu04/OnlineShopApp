@@ -3,3 +3,12 @@ mat-grid-tile {
   background-color: cornflowerblue;
 
 }
+
+#categoryButton {
+  color: white;
+}
+
+#product_cards {
+  float: left;
+  margin: 2px;
+}
