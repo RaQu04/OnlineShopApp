@@ -45,6 +45,9 @@ class UserControllerTest {
     @Autowired
     private TestRestTemplate testRestTemplate;
 
+    @Autowired
+    private UserService userService;
+
     @BeforeEach
     void setUp() {
 
@@ -73,5 +76,18 @@ class UserControllerTest {
         //then
         assertThat("john123").isEqualTo(Objects.requireNonNull(forEntity.getBody()).getLogin());
      }
+     
+     @Test
+     void shouldReturnUserWithTypeAccount() {
+         //given
+         userRepository.save(USER_ENTITY_JOHN_WEAK);
+         //when
+
+         final List<User> usersByType = userService.getUsersByType(TypeAccount.NORMAL);
+
+         //then
+         assertThat(TypeAccount.NORMAL).isEqualTo(usersByType.get(0).getTypeAccount());
+         assertThat(TypeAccount.PREMIUM).isNotEqualTo(usersByType.get(0).getTypeAccount());
+      }
 
 }
