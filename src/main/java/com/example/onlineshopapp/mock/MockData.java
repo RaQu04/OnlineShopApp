@@ -1,20 +1,26 @@
 package com.example.onlineshopapp.mock;
 
+import com.example.onlineshopapp.auction.AuctionEntity;
+import com.example.onlineshopapp.auction.AuctionRepository;
+import com.example.onlineshopapp.auction.Category;
+import com.example.onlineshopapp.auction.FeatureAuction;
 import com.example.onlineshopapp.user.*;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.sql.Date;
+import java.math.BigDecimal;
 import java.time.Instant;
 
 @Service
 public class MockData {
 
     private final UserRepository userRepository;
+    private final AuctionRepository auctionRepository;
 
-
-    public MockData(UserRepository userRepository) {
+    public MockData(UserRepository userRepository, AuctionRepository auctionRepository) {
         this.userRepository = userRepository;
+        this.auctionRepository = auctionRepository;
     }
 
     @PostConstruct
@@ -31,6 +37,22 @@ public class MockData {
                 Status.ACTIVE,
                 TypeAccount.PREMIUM);
         userRepository.save(userEntity);
+
+        AuctionEntity auctionEntity = new AuctionEntity(
+                null,
+                "Laptop Dell",
+                "Mam na sprzedaż laptopa",
+                Category.ELEKTRONIKA,
+                BigDecimal.valueOf(100),
+                BigDecimal.valueOf(200),
+                FeatureAuction.NO,
+                "Kalisz",
+                Date.from(Instant.now()),
+                Date.from(Instant.now()),
+                0
+        );
+
+        auctionRepository.save(auctionEntity);
 
     }
 }
