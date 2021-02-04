@@ -42,7 +42,7 @@ public class MockData {
                 null,
                 "Laptop Dell",
                 "Mam na sprzedaż laptopa",
-                Category.ELEKTRONIKA,
+                Category.ELECTRONICS,
                 BigDecimal.valueOf(100),
                 BigDecimal.valueOf(200),
                 FeatureAuction.NO,
