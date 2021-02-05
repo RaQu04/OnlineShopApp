@@ -14,12 +14,16 @@ public class AuctionService {
     public Long createUserEntityFromClientAndGetId(Auction auction) {
         final AuctionEntity auctionEntity = auctionRepository.save
                 (new AuctionEntity(null,
-                        auction.getTitle(),
-                        auction.getCategory(),
-                        auction.getCity(),
-                        auction.getStartDate(),
-                        auction.getEndDate(),
-                        auction.getAuctionPrice()));
+                        auction.getAuctionTitle(),
+                        auction.getAuctionCategory(),
+                        auction.getAuctionCity(),
+                        auction.getAuctionStartDate(),
+                        auction.getAuctionEndDate(),
+                        auction.getAuctionPriceMinimal(),
+                        auction.getAuctionPriceBuyNow(),
+                        auction.getAuctionVisitors(),
+                        auction.getAuctionUserPremium(),
+                        auction.getAuctionDescription()));
         return auctionEntity.getId();
     }
 }

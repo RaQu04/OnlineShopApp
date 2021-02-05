@@ -20,11 +20,15 @@ public class AuctionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    String title;
-    String city;
-    String category;
-    Date startDate;
-    Date endDate;
-    BigDecimal auctionPrice;
+    String auctionTitle;
+    String auctionCity;
+    String auctionCategory;
+    Date auctionStartDate;
+    Date auctionEndDate;
+    BigDecimal auctionPriceMinimal;
+    BigDecimal auctionPriceBuyNow;
+    Long auctionVisitors;
+    Boolean auctionUserPremium;
+    String auctionDescription;
 
 }
