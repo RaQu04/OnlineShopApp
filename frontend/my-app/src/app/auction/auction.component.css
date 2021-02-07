@@ -1,0 +1,46 @@
+.auction-title {
+  max-width: 40%;
+  float: left;
+}
+
+.mat-card-image {
+  float: right;
+
+}
+
+#add_basket_button {
+  text-align: Right;
+}
+
+#price_border {
+  color: darkorange;
+  font-size: 40px;
+  font-style: italic;
+  text-align: right;
+}
+
+#price {
+  color: darkorange;
+  font-size: large;
+  font-style: italic;
+}
+
+.auction-info {
+  width: 100%;
+  float: left;
+
+}
+
+.mat-auction {
+  width: 60%;
+  float: right;
+}
+
+
+.bid_button {
+}
+
+#endDate {
+  font-size: large;
+  font-style: italic;
+}
