@@ -43,6 +43,7 @@ const routes: Routes = [
   { path: 'category', component: CategoryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'auction', component: AuctionComponent },
   { path: 'basket', component: BasketComponent },
   { path: 'login', component: LoginPanelComponent }];
 

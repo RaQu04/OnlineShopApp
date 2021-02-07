@@ -14,8 +14,6 @@ export class AuctionComponent implements OnInit {
   currency: string;
   endDate: string;
 
-  constructor() { }
-
   ngOnInit(): void {
     this.price = 199.99;
     this.currency = ' zł';
@@ -46,4 +44,4 @@ export class AuctionComponent implements OnInit {
       this.price = this.price + 10;
     }
   }
-}
+  }
