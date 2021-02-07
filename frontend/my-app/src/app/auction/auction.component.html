@@ -1,0 +1,45 @@
+
+  <mat-card class="auction-title">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{title}}</mat-card-title>
+      <mat-card-subtitle>{{category}}</mat-card-subtitle>
+      </mat-card-header>
+    <img mat-card-image src="https://www.mediaexpert.pl/media/cache/gallery/product/2/913/148/493/qjajxmac/images/26/2682149/Laptop-DELL-G3-15-3500-skos-prawy.jpg" alt="Photo of a laptop Dell">
+  </mat-card>
+
+  <mat-card class="mat-auction">
+    <mat-card-actions id="add_basket_button">
+      <p id="price_border">Kup Teraz: {{priceBuyNow}}{{currency}}</p>
+      <p id="price">Aktualna cena: {{price}}{{currency}}</p>
+      <p id="endDate">Oferta ważna tylko do: {{endDate}}</p>
+      <div>
+        <button mat-button class="bid_button" (click)="bidPlusOne()">+ 1 zł</button>
+      </div><div>
+      <button mat-button class="bid_button" (click)="bidPlusMore()">Licytuj</button>
+    </div>
+      <div>
+        <button mat-button (click)="getDescriptionDell()">Informacje o produkcie</button>
+      </div>
+      <div>
+        <button mat-button>Dodaj do obserwowanych</button>
+      </div>
+      <div>
+        <button mat-button>Dodaj do Koszyka</button>
+      </div>
+      <div>
+        <button mat-button>Inne aukcje sprzedającego</button>
+      </div>
+      </mat-card-actions>
+
+    </mat-card>
+
+  <mat-card class="auction-info">
+    <mat-card-content>
+      {{description}}
+    </mat-card-content>
+  </mat-card>
+
+
+
+
