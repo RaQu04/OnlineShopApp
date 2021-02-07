@@ -21,7 +21,7 @@ export class AuctionComponent implements OnInit {
     this.currency = ' zł';
     this.title = 'Laptop Dell';
     this.category = 'Elektronika';
-    this.priceBuyNow = 299.99;
+    this.priceBuyNow = 211.99;
     this.endDate = '14.02.2020';
   }
 
@@ -31,11 +31,19 @@ export class AuctionComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   bidPlusOne() {
-    this.price = this.price + 1;
-  }
+    if (this.price + 1 > this.priceBuyNow) {
+      this.price = this.priceBuyNow;
+    } else {
+      this.price = this.price + 1;
+    }
+    }
 
   // tslint:disable-next-line:typedef
   bidPlusMore() {
-    this.price = this.price + 10;
+    if (this.price + 10 > this.priceBuyNow ) {
+      this.price = this.priceBuyNow;
+    } else {
+      this.price = this.price + 10;
+    }
   }
 }
