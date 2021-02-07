@@ -36,10 +36,11 @@ import { ProductComponent } from './product/product.component';
 
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'category', component: CategoryComponent },
+  { path: 'category/:categoryName' , component: CategoryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'basket', component: BasketComponent },
@@ -63,8 +64,8 @@ const routes: Routes = [
     ShoppingItemComponent,
     ProductCardComponent,
     CategoryElectronicComponent,
-    ProductComponent
-  ],
+    ProductComponent,
+    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

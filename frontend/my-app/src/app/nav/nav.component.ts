@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-nav',
@@ -6,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+  private categoryName: string;
 
-  constructor() {}
+  constructor(private router: ActivatedRoute) {}
 
 
   ngOnInit(): void {
+    this.router.params.subscribe((params:Params) => {
+      this.categoryName = params['categoryName']
+    })
   }
+
 
 }

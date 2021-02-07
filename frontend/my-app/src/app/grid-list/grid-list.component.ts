@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ProductComponent} from '../product/product.component';
+import {ActivatedRoute, Params} from "@angular/router";
 
 @Component({
   selector: 'app-grid-list',
@@ -8,40 +9,15 @@ import {ProductComponent} from '../product/product.component';
 })
 export class GridListComponent implements OnInit {
 
-  value: string;
-  products: any;
-  productComponent: ProductComponent;
-  actual: boolean;
 
-  constructor() {
-   }
+  private categoryName: string;
+
+  constructor(private router: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
-  }
-
-  showToys(): void {
-    this.value = 'Kategoria zabawki';
-  }
-
-  showProperty(): void {
-    this.value = 'Kategoria nieruchomości';
-  }
-
-  showAutomotive(): void {
-    this.value = 'Kategoria motoryzacja';
-  }
-
-  showElectronic(): void {
-    this.value = 'Kategoria elektronika';
-    this.actual = true;
-  }
-
-  showBike(): void {
-    this.value = 'Kategoria rowery';
-  }
-
-  showFashion(): void {
-    this.value = 'Kategoria moda';
-
+    this.router.params.subscribe((params: Params) => {
+      this.categoryName = params['categoryName']
+    })
   }
 }
