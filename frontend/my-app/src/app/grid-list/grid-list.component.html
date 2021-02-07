@@ -9,19 +9,11 @@
   <mat-grid-tile> <button id='categoryButton' mat-button (click)="showFashion()">Moda</button></mat-grid-tile>
 </mat-grid-list>
 
-{{value}}
-{{products}}
 
 <br><br>
 
-<div *ngIf="actual">
+<div *ngFor="let product of products">
   <div id="product_cards">
-    <app-product-card></app-product-card>
-  </div>
-  <div id="product_cards">
-    <app-product-card></app-product-card>
-  </div>
-  <div id="product_cards">
-    <app-product-card></app-product-card>
+    <app-product-card [product]="product"></app-product-card>
   </div>
 </div>

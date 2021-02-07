@@ -1,18 +1,17 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>{{title}}</mat-card-title>
-    <mat-card-subtitle>{{category}}</mat-card-subtitle>
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <mat-card-subtitle>{{product.category}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image
-    src="https://www.mediaexpert.pl/media/cache/gallery/product/2/913/148/493/qjajxmac/images/26/2682149/Laptop-DELL-G3-15-3500-skos-prawy.jpg"
-    alt="Photo of a laptop Dell">
+    src= "{{product.productImage}}" alt = "zdjecie">
   <mat-card-content>
-    {{description}}
+    {{product.description}}
   </mat-card-content>
   <mat-card-actions id="add_basket_button">
     <button mat-button (click)="getDescriptionDell()">Pokaż opis</button>
     <button mat-button>Dodaj do koszyka</button>
-    <p id="price_border">{{price}}{{currency}}</p>
+    <p id="price_border">{{product.price}}{{product.currency}}</p>
   </mat-card-actions>
 </mat-card>
