@@ -20,7 +20,7 @@ import { ContactComponent } from './contact/contact.component';
 import { BasketComponent } from './basket/basket.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPanelComponent } from './login-panel/login-panel.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -33,6 +33,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { CategoryElectronicComponent } from './category-electronic/category-electronic.component';
 import { ProductComponent } from './product/product.component';
+import {AuctionComponent} from './auction/auction.component';
 
 
 
@@ -63,7 +64,8 @@ const routes: Routes = [
     ShoppingItemComponent,
     ProductCardComponent,
     CategoryElectronicComponent,
-    ProductComponent
+    ProductComponent,
+    AuctionComponent
   ],
   imports: [
     BrowserModule,
