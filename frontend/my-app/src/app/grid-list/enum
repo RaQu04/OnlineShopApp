@@ -1,0 +1,10 @@
+enum categoryName {
+
+  MOTORIZATION = "Motorization",
+  ESTATE = "Real Estate",
+  TOYS = "Toys",
+  ELECTRONICS = "Electronics",
+  BIKE = "Bike",
+  FASHION = "Fashion",
+}
+

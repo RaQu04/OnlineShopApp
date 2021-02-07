@@ -37,10 +37,11 @@ import {AuctionComponent} from './auction/auction.component';
 
 
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'category', component: CategoryComponent },
+  { path: 'category/:categoryName' , component: CategoryComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'auction', component: AuctionComponent },
@@ -68,6 +69,7 @@ const routes: Routes = [
     ProductComponent,
     AuctionComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

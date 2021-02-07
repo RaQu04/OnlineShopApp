@@ -6,22 +6,18 @@
   <div class="space"></div>
 
 
-  <!--  <label>-->
-  <!--    <input type="text" placeholder="Czego szukasz?">-->
-  <!--  </label>-->
-
 
   <button mat-button [routerLink]="['/home']"> Strona główna</button>
   <!-- <button mat-button [routerLink]="['/category']">Kategorie</button> -->
-  <button mat-button [matMenuTriggerFor] = "categoryList">Kategorie</button>
+    <button mat-button [matMenuTriggerFor] = "categoryList" #menuTrigger="matMenuTrigger" (mouseenter)="menuTrigger.toggleMenu()">Kategorie</button>
   <mat-menu #categoryList="matMenu">
     <button mat-menu-item [routerLink]="['/category']">Przejdź do kategorii</button>
-    <button mat-menu-item>Motoryzacja</button>
-    <button mat-menu-item>Nieruchomości</button>
-    <button mat-menu-item>Zabawki</button>
-    <button mat-menu-item>Elektronika</button>
-    <button mat-menu-item>Rowery</button>
-    <button mat-menu-item>Moda</button>
+    <button mat-menu-item [routerLink]="['/category', 'Motorization']">Motoryzacja</button>
+    <button mat-menu-item [routerLink]="['/category', 'Real Estate']">Nieruchomości</button>
+    <button mat-menu-item [routerLink]="['/category', 'Toys']">Zabawki</button>
+    <button mat-menu-item [routerLink]="['/category', 'Electronics']">Elektronika</button>
+    <button mat-menu-item [routerLink]="['/category', 'Bike']">Rowery</button>
+    <button mat-menu-item [routerLink]="['/category', 'Fashion']">Moda</button>
   </mat-menu>
 
   <button mat-button [routerLink]="['/about']">O nas</button>
